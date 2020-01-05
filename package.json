@@ -1,0 +1,14 @@
+{
+  "name": "rogeriocsilva.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rogeriocsilva/rogeriocsilva.github.io.git",
+  "author": "Rogério Silva <rogeriocsilva21@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}
