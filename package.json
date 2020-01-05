@@ -5,6 +5,9 @@
   "repository": "git@github.com:rogeriocsilva/rogeriocsilva.github.io.git",
   "author": "Rogério Silva <rogeriocsilva21@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "gulp"
+  },
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",

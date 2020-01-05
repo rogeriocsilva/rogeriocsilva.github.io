@@ -2,24 +2,24 @@
 
 var gulp = require('gulp')
 var browserSync = require('browser-sync').create();
-var gulp-sass = require('gulp-sass')
+var sass = require('gulp-sass')
 var prefix = require('gulp-autoprefixer')
 var reload = browserSync.reload;
 
 
 var src = {
-    scss: './_scss/*.scss',
-    css: './css',
+    scss: './scss/*.scss',
+    css: './css/',
     html: './*.html'
 };
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function () {
+gulp.task('serve', function () {
 
     browserSync.init({
-        server: "./app"
+        server: "."
     });
 
-    gulp.watch(src.scss, ['sass']);
+    gulp.watch(src.scss, gulp.series('sass'));
     gulp.watch(src.html).on('change', reload);
 });
 
@@ -32,4 +32,4 @@ gulp.task('sass', function () {
         .pipe(reload({ stream: true }));
 });
 
-gulp.task('default', ['serve']);
+gulp.task('default', gulp.parallel('sass', 'serve'));
