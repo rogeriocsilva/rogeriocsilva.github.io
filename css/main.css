@@ -61,7 +61,17 @@ select {
   --last-fm-color: #b90000;
   --linkedin-color: #2977c9;
   --github-color: rgba(0, 0, 0, 0.5);
-  --primary-font: "Open Sans", sans-serif; }
+  --primary-font: "Open Sans", sans-serif;
+  --white-color: #fff; }
+
+html[data-theme="light"] {
+  --background-color: #f3f3f3;
+  --text-color: #000000; }
+
+html[data-theme="dark"] {
+  --background-color: #131313;
+  --text-color: #f1f1f1;
+  --github-color: rgba(255, 255, 255, 0.5); }
 
 body {
   position: relative;
@@ -115,14 +125,14 @@ main {
 .header {
   margin: 1.5rem auto;
   text-align: center;
-  grid-column: 1/5; }
+  grid-column: 1/4; }
   @media (min-width: 768px) {
     .header {
       margin: 1.5rem auto 1.5rem 1.5rem;
       text-align: left; } }
   @media (min-width: 992px) {
     .header {
-      grid-column: 1/13; } }
+      grid-column: 1/10; } }
   .header--link {
     font-size: 2rem;
     line-height: 1.25em;
@@ -251,3 +261,54 @@ main {
     -webkit-transition: fill 0.1s ease-in-out;
     -o-transition: fill 0.1s ease-in-out;
     transition: fill 0.1s ease-in-out; }
+
+.theme {
+  grid-column: 4/5;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media (min-width: 992px) {
+    .theme {
+      grid-column: 10/13; } }
+  .theme--switch {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    width: 4rem;
+    height: 2rem;
+    display: inline-block;
+    position: relative;
+    border-radius: 3.125rem;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: var(--text-color);
+    -webkit-transition: background-color ease 0.3s;
+    -o-transition: background-color ease 0.3s;
+    transition: background-color ease 0.3s; }
+    .theme--switch::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 2;
+      width: 1.75rem;
+      height: 1.75rem;
+      background: var(--background-color);
+      left: 0.125rem;
+      top: 0.125rem;
+      border-radius: 50%;
+      -webkit-transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+      -o-transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s;
+      transition: all cubic-bezier(0.3, 1.5, 0.7, 1) 0.3s; }
+    .theme--switch:checked {
+      background-color: var(--text-color); }
+      .theme--switch:checked:before {
+        left: 2rem;
+        background: var(--background-color); }
