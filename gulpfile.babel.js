@@ -85,7 +85,7 @@ function html() {
 function serve(done) {
     server.init({
         server: {
-            baseDir: './dist/'
+            baseDir: paths.root.dest
         }
     });
     done();
