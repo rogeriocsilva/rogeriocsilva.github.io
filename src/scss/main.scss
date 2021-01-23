@@ -1,6 +1,62 @@
-
-body{
-    background-color: white;
-    font-family: 'Open Sans';
+:root {
+    --background-color: #f3f3f3;
+    --text-color: #000000;
+    --primary-font: "Open Sans", sans-serif;
 }
-// yoyoyoy
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--primary-font);
+}
+
+img {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+h1, h3 {
+    text-align: center;
+}
+
+h3{
+    text-transform: uppercase;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 700px) {
+        flex-direction: row;
+    }
+
+    a {
+        font-size: 0.875rem;
+        line-height: 1.25em;
+        color: var(--text-color);
+        transition: opacity 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+        opacity: 1;
+        text-decoration: none;
+        
+        &:hover {
+            transition: opacity 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+            opacity: 0.5;
+            text-decoration: underline;
+        }
+    }
+    a + a {
+        margin-top: 0.5rem;
+        @media (min-width: 700px) {
+            margin-left: 0.5rem;
+            margin-top: 0;
+        }
+    }
+}

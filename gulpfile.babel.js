@@ -18,27 +18,27 @@ const server = browserSync.create();
 const paths = {
     root: {
         src: 'src/',
-        dest: 'dist/'
+        dest: './'
     },
     styles: {
         src: 'src/scss/**/*.scss',
-        dest: 'dist/css/'
+        dest: './css/'
     },
     js: {
         src: 'src/js/**/*.js',
-        dest: 'dist/js/'
+        dest: './js/'
     },
     images: {
         src: 'src/images/*',
-        dest: 'dist/images/'
+        dest: './images/'
     },
     fonts: {
         src: 'src/fonts/**/*.{ttf,woff,eot,svg}',
-        dest: 'dist/fonts/'
+        dest: './fonts/'
     },
 };
 
-const clean = () => del([paths.root.dest]);
+// const clean = () => del([paths.root.dest]);
 
 function scripts() {
     return gulp.src(paths.js.src, { sourcemaps: true })
@@ -98,5 +98,5 @@ function watch() {
     gulp.watch(`${paths.root.src}*.html`, html);
 }
 
-const build = gulp.series(clean, scripts, styles, images, fonts, copyRootFiles, html, serve, watch);
+const build = gulp.series( scripts, styles, images, fonts, copyRootFiles, html, serve, watch);
 export default build;
