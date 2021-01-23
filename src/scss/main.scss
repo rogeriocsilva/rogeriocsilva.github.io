@@ -70,6 +70,7 @@ select {
     --last-fm-color: #b90000;
     --linkedin-color: #2977c9;
     --github-color: rgba(0, 0, 0, 0.5);
+    --spotify-color: #1ED760;
 
     --primary-font: "Open Sans", sans-serif;
     --white-color: #fff;
@@ -229,6 +230,9 @@ main {
                 &.github {
                     fill: var(--github-color);
                 }
+                &.spotify{
+                    fill: var(--spotify-color);
+                }
             }
         }
     }
@@ -250,7 +254,7 @@ main {
     @include desktop {
         grid-column: 10/13;
     }
-    
+
     &--switch {
         appearance: none;
         width: 4rem;

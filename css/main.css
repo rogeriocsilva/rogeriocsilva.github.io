@@ -61,6 +61,7 @@ select {
   --last-fm-color: #b90000;
   --linkedin-color: #2977c9;
   --github-color: rgba(0, 0, 0, 0.5);
+  --spotify-color: #1ED760;
   --primary-font: "Open Sans", sans-serif;
   --white-color: #fff; }
 
@@ -254,6 +255,8 @@ main {
         fill: var(--last-fm-color); }
       .social--link:hover .social--icon.github {
         fill: var(--github-color); }
+      .social--link:hover .social--icon.spotify {
+        fill: var(--spotify-color); }
   .social--icon {
     fill: var(--text-color);
     height: 1.5rem;
