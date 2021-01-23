@@ -6,7 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Rogério Silva</title>
+  <meta name="title" content="Rogério Silva">
+  <meta name="description" content="My personal website">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 
   <!-- inject:css -->
   <!-- endinject -->
@@ -14,16 +20,42 @@
 
 <body>
   <main>
-    <h1>rogeriocsilva</h1>
-    <h3>Work in progress</h3>
-    <img src="/images/progress-wrench.svg" alt="wip">
+    <section class="container">
+      <div class="header">
+        <a href="/" class="header--link">
+          <h1 class="header--title">Rogério Silva</h1>
+        </a>
+        <h4 class="header--sub-title">Software Engineer @ Coimbra</h4>
+      </div>
+
+    </section>
+    <section class="container">
+      <div class="hero">
+        <img class="hero--image" alt="profile picture" src="/images/rsilva.jpg">
+        <p class="hero--text">
+          Hey. My name is Rogério Silva and I'm a software engineer currently working from Coimbra, Portugal.
+        </p>
+      </div>
+    </section>
     <div class="social">
-      <a href="https://github.com/rogeriocsilva" target="_blank" rel="noopener">github</a>
-      <a href="https://www.linkedin.com/in/95rogeriocsilva/" target="_blank" rel="noopener">linkedin</a>
-      <a href="https://twitter.com/_rogeriocsilva" target="_blank" rel="noopener">twitter</a>
-      <a href="https://www.last.fm/user/rogeriocsilva" target="_blank" rel="noopener">lastfm</a>
+      <a href="https://github.com/rogeriocsilva" target="_blank" rel="noopener" class="social--link">
+        <img src="/images/iconmonstr-github-1.svg" alt="twitter icon" class="social--icon github svg">
+
+      </a>
+      <a href="https://www.linkedin.com/in/95rogeriocsilva/" target="_blank" rel="noopener" class="social--link">
+        <img src="/images/iconmonstr-linkedin-1.svg" alt="twitter icon" class="social--icon linkedin svg">
+      </a>
+      <a href="https://twitter.com/_rogeriocsilva" target="_blank" rel="noopener" class="social--link">
+        <img src="/images/iconmonstr-twitter-1.svg" alt="twitter icon" class="social--icon twitter svg">
+      </a>
+      <a href="https://www.last.fm/user/rogeriocsilva" target="_blank" rel="noopener" class="social--link">
+        <img src="/images/iconmonstr-last-fm-1.svg" alt="twitter icon" class="social--icon last-fm svg">
+      </a>
     </div>
   </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <!-- inject:js -->
   <!-- endinject -->
 
