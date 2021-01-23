@@ -125,14 +125,10 @@ main {
 }
 
 .header {
-    margin: 1.5rem auto;
-    text-align: center;
+    margin: 1.5rem auto 1.5rem 0;
     grid-column: 1/4;
+    text-align: left;
 
-    @include tablet {
-        margin: 1.5rem auto 1.5rem 1.5rem;
-        text-align: left;
-    }
     @include desktop {
         grid-column: 1/10;
     }
