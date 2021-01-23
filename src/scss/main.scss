@@ -119,6 +119,7 @@ main {
 
     @include tablet {
         margin: 1.5rem auto 1.5rem 1.5rem;
+        text-align: left;
     }
     @include desktop {
         grid-column: 1/13;
